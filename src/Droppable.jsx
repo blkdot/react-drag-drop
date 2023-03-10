@@ -13,7 +13,9 @@ const Droppable = ({ id, items, allItems, setItems }) => {
     minWidth: 200,
     height: 400,
     marginLeft: 8,
-    marginRight: 8
+    marginRight: 8,
+    overflowY: 'auto',
+    overflowX: 'hidden'
   };
 
   const addBtnStyle = {
