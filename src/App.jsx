@@ -15,9 +15,9 @@ import "./styles.css"
 
 function App() {
   const [items, setItems] = useState({
-    group1: [1, 2, 3],
-    group2: [4, 5, 6],
-    group3: [7, 8, 9]
+    group1: ["1", "2", "3"],
+    group2: ["4", "5", "6"],
+    group3: ["7", "8", "9"]
   });
 
   const sensors = useSensors(

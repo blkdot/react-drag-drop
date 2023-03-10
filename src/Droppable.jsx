@@ -37,8 +37,12 @@ const Droppable = ({ id, items, allItems, setItems }) => {
   };
 
   const handleAddBtnClick = () => {
-    const itemIndex = Math.max(...[...allItems.group1, ...allItems.group2, ...allItems.group3])
-    setItems(id, [...items, itemIndex + 1])
+    let group1 = allItems.group1.map((item) => parseInt(item))
+    let group2 = allItems.group2.map((item) => parseInt(item))
+    let group3 = allItems.group3.map((item) => parseInt(item))
+
+    const itemIndex = Math.max(...[...group1, ...group2, ...group3])
+    setItems(id, [...items, (itemIndex + 1).toString()])
   }
 
   return (
